@@ -2,9 +2,14 @@
   "name": "inventory-managment",
   "version": "1.0.0",
   "description": "inventory management!",
-  "main": "index.js",
+  "main": "dist/app/inventory-api/index.js",
   "scripts": {
-    "start": ""
+    "build": "rimraf dist && tsc -p tsconfig-build.json",
+    "build:watch": "npm run build -- --watch",
+    "start": "node dist/app/home-api/index.js",
+    "dev": "nodemon -L --watch ./dist ./dist/app/inventory-api/index.js",
+    "start:dev": "concurrently --kill-others-on-fail \"npm run build:watch\" \"npm run dev\"",
+    "prepare": "husky install"
   },
   "keywords": [
     "TypeScript",
@@ -15,8 +20,11 @@
   "author": "aforamitdev",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^7.4.0",
     "db-migrate": "^0.11.13",
-    "http-status-code": "^2.1.0"
+    "http-status-code": "^2.1.0",
+    "husky": "^8.0.1",
+    "module-alias": "^2.2.2"
   },
   "devDependencies": {
     "@types/http-status-codes": "^1.2.0"
