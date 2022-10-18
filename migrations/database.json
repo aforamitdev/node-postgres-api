@@ -1,0 +1,8 @@
+{
+  "dev": {
+    "driver": "pg",
+    "user": "admin",
+    "password": "admin",
+    "database": "inventory-database-test"
+  }
+}
