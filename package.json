@@ -11,7 +11,7 @@
     "start:dev": "concurrently --kill-others-on-fail \"npm run build:watch\" \"npm run dev\"",
     "prepare": "husky install",
     "migrate:up": "ts-node scripts/index.ts",
-    "migrate:create": "node-pg-migrate create $NAME -j ts"
+    "migrate:create": "node-pg-migrate create $NAME -j sql"
   },
   "keywords": [
     "TypeScript",
@@ -26,6 +26,8 @@
     "dotenv": "^16.0.3",
     "http-status-code": "^2.1.0",
     "husky": "^8.0.1",
+    "inversify": "^6.0.1",
+    "inversify-express-utils": "^6.4.3",
     "module-alias": "^2.2.2",
     "node-pg-migrate": "^6.2.2",
     "pg": "^8.8.0"
