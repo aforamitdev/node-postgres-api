@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/app/inventory-api/index.ts"],"names":[],"mappings":";AAAA,OAAO,CAAC,GAAG,CAAC,qBAAqB,CAAC,CAAC"}
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/app/inventory-api/index.ts"],"names":[],"mappings":";;AAAA,iCAA+B;AAC/B,OAAO,CAAC,GAAG,CAAC,qBAAqB,CAAC,CAAC;AAInC,MAAM,WAAW;CAAG"}
