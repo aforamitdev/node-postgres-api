@@ -1,5 +1,7 @@
 -- Up Migration
 
+-- Up Migration
+
 CREATE TABLE
     IF NOT EXISTS country(
         id UUID NOT NULL PRIMARY KEY,
@@ -9,7 +11,7 @@ CREATE TABLE
 
 CREATE TABLE
     IF NOT EXISTS state(
-        id UUID INTEGER PRIMARY KEY NOT NULL,
+        id UUID PRIMARY KEY NOT NULL,
         name text NOT NULL,
         code text NOT NULL,
         country_id UUID,
@@ -25,8 +27,8 @@ CREATE TABLE
         city text,
         state_id UUID,
         zipcode text,
-        longitude number,
-        longitude number,
+        longitude numeric,
+        latitude numeric,
         CONSTRAINT state_id FOREIGN KEY(state_id) REFERENCES state(id)
     );
 

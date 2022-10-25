@@ -11,7 +11,7 @@
     "start:dev": "concurrently --kill-others-on-fail \"npm run build:watch\" \"npm run dev\"",
     "prepare": "husky install",
     "migrate:up": "ts-node scripts/index.ts",
-    "migrate:create": "node-pg-migrate create $NAME -j sql"
+    "migrate:create": "node-pg-migrate create $name -j $type"
   },
   "keywords": [
     "TypeScript",

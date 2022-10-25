@@ -5,6 +5,7 @@ const options: RunnerOption = {
   direction: 'up',
   dir: 'migrations',
   migrationsTable: 'pgmigrations',
+
   databaseUrl: process.env.DB_URL!,
 };
 console.log(process.env.DB_URL);
