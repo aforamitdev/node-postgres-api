@@ -18,6 +18,7 @@ export class CompanyController {
     @requestBody() body: any
   ) {
     console.log(body);
+    console.log('Comnaby ');
     return res.json(body);
   }
 }

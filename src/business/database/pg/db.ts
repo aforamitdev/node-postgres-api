@@ -6,6 +6,7 @@ export class DatabaseContext {
   public pgContext: PoolClient;
   public pool: Pool;
   constructor() {
+    console.log('Database class, initialization');
     this.pool = new Pool({
       host: 'localhost',
       user: 'admin',

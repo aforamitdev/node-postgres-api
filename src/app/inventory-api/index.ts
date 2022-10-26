@@ -1,6 +1,7 @@
+import 'reflect-metadata';
+
 import 'module-alias/register';
 console.log('Application started');
-import 'reflect-metadata';
 
 import { InversifyExpressServer } from 'inversify-express-utils';
 import express from 'express';
@@ -20,8 +21,13 @@ export class Application {
 
     const app = server.build();
 
-    const databaseContext = container.get(DatabaseContext);
-    await databaseContext.connect();
+    console.log('database');
+    try {
+      const databaseContext = container.get(DatabaseContext);
+      await databaseContext.connect();
+    } catch (error) {
+      console.log(error);
+    }
 
     app.listen(this.port, () => {
       console.log(`server started at http://localhost:${this.port}`);

@@ -2,13 +2,13 @@
   "name": "inventory-managment",
   "version": "1.0.0",
   "description": "inventory management!",
-  "main": "dist/app/inventory-api/index.js",
+  "main": "dist/server.js",
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig-build.json",
     "build:watch": "npm run build -- --watch",
-    "start": "node dist/app/inventory-api/index.js",
-    "dev": "nodemon -L --watch ./dist ./dist/app/inventory-api/index.js",
-    "start:dev": "concurrently --kill-others-on-fail \"npm run build:watch\" \"npm run dev\"",
+    "start": "node dist/server.js",
+    "dev": "nodemon  --watch ./dist ./dist/server.js",
+    "start:dev": "nodemon .",
     "prepare": "husky install",
     "migrate:up": "ts-node scripts/index.ts",
     "migrate:create": "node-pg-migrate create $name -j $type"
