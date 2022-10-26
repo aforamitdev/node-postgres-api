@@ -1,3 +1,3 @@
 export const TYPES = {
-  PGContext: Symbol('PGContext'),
+  DatabaseContext: Symbol('DatabaseContext'),
 };
